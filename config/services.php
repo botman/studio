@@ -35,4 +35,17 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+
+    'botman' => [
+        'hipchat_urls' => [
+            env('HIPCHAT_URL')
+        ],
+        'microsoft_app_id' => env('MICROSOFT_APP_ID'),
+        'microsoft_app_key' => env('MICROSOFT_APP_KEY'),
+        'nexmo_key' => env('NEXMO_KEY'),
+        'nexmo_secret' => env('NEXMO_SECRET'),
+        'slack_token' => env('SLACK_TOKEN'),
+        'telegram_token' => env('TELEGRAM_TOKEN'),
+        'facebook_token' => env('FACEBOOK_TOKEN')
+    ],
 ];
