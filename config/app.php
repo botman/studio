@@ -167,7 +167,7 @@ return [
          * Package Service Providers...
          */
 
-        //
+        \Mpociot\BotMan\BotManServiceProvider::class,
 
         /*
          * Application Service Providers...
