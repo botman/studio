@@ -11,4 +11,4 @@
 |
 */
 
-Route::match(['get', 'post'], '/', 'BotManController@handle');
+Route::match(['get', 'post'], '/botman', 'BotManController@handle');
