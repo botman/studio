@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Conversations\ExampleConversation;
 use Illuminate\Http\Request;
 use Mpociot\BotMan\BotMan;
 
@@ -20,11 +21,15 @@ class BotManController extends Controller
             $bot->reply('Hi there :)');
         });
 
-        // Start a conversation
-        $botman->hears('Start conversation', function (BotMan $bot) {
-            $bot->startConversation(new ExampleConversation());
-        });
-
         $botman->listen();
+    }
+
+    /**
+     * Loaded through routes/botman.php
+     * @param  BotMan $bot
+     */
+    public function startConversation(BotMan $bot)
+    {
+        $bot->startConversation(new ExampleConversation());
     }
 }

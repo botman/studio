@@ -15,7 +15,7 @@ the messaging services for testing. The predefined route is `/botman`.
 
 3. Edit your `.env` file and [connect BotMan with your Messaging Services](https://github.com/mpociot/botman#connect-with-your-messaging-service)
 
-4. Modify your bot logic in `app/Controllers/BotManController.php`
+4. Modify your bot logic in `app/Controllers/BotManController.php` and/or `routes/botman.php`.
 
 5. Build awesome bots!
 
