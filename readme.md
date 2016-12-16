@@ -19,6 +19,8 @@ the messaging services for testing. The predefined route is `/botman`.
 
 5. Build awesome bots!
 
+> If you want to use the Slack RTM API, simply call `php artisan botman:listen` to let your bot connect to your Slack channel!
+
 ## License
 
 BotMan and this boilerplate is free software distributed under the terms of the MIT license.
