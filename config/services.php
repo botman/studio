@@ -40,6 +40,7 @@ return [
         'hipchat_urls' => [
             env('HIPCHAT_URL')
         ],
+        'microsoft_bot_handle' => env('MICROSOFT_BOT_HANDLE'),
         'microsoft_app_id' => env('MICROSOFT_APP_ID'),
         'microsoft_app_key' => env('MICROSOFT_APP_KEY'),
         'nexmo_key' => env('NEXMO_KEY'),
