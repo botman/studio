@@ -14,7 +14,12 @@ class BotManController extends Controller
     public function handle()
     {
     	$botman = app('botman');
-        $botman->verifyServices(env('TOKEN_VERIFY'));
+
+        $botman->verifyServices(
+	    env('FACEBOOK_VERIFY_TOKEN'),
+	    env('WECHAT_VERIFY_TOKEN'),
+	    env('SLACK_VERIFY_TOKEN')
+	);
 
         // Simple respond method
         $botman->hears('Hello', function (BotMan $bot) {
