@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use App\Conversations\ExampleConversation;
 use Illuminate\Console\Command;
 use Mpociot\BotMan\BotManFactory;
-use Mpociot\BotMan\Cache\LaravelCache;
+use Mpociot\BotMan\Cache\ArrayCache;
 use React\EventLoop\Factory;
 
 class BotManListen extends Command
@@ -46,7 +46,7 @@ class BotManListen extends Command
         $loop = Factory::create();
 
         $app->singleton('botman', function ($app) use ($loop) {
-            return BotManFactory::createForRTM(config('services.botman', []), $loop, new LaravelCache());
+            return BotManFactory::createForRTM(config('services.botman', []), $loop, new ArrayCache());
         });
 
         require base_path('routes/botman.php');
