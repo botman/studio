@@ -46,7 +46,7 @@ class FacebookAddStartButtonPayload extends Command
     {
         $payload = $this->argument('payload');
 
-        $response = $this->http->post('https://graph.facebook.com/v2.66/me/messenger_profile?access_token='.env('FACEBOOK_TOKEN'), [], [
+        $response = $this->http->post('https://graph.facebook.com/v2.6/me/messenger_profile?access_token='.env('FACEBOOK_TOKEN'), [], [
                 "get_started" => [
                     "payload" => $payload,
                 ],
