@@ -47,6 +47,7 @@ return [
         'nexmo_secret' => env('NEXMO_SECRET'),
         'slack_token' => env('SLACK_TOKEN'),
         'telegram_token' => env('TELEGRAM_TOKEN'),
-        'facebook_token' => env('FACEBOOK_TOKEN')
+        'facebook_token' => env('FACEBOOK_TOKEN'),
+        'facebook_start_button_payload' => ''
     ],
 ];
