@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "237013560a7f6b9fc99d43997908d39b",
+    "content-hash": "0f117124f4f6cb7c14c5229608728b41",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -59,6 +59,168 @@
                 "preload"
             ],
             "time": "2016-09-16T12:50:15+00:00"
+        },
+        {
+            "name": "clue/stdio-react",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/clue/php-stdio-react.git",
+                "reference": "c307fc7ab581c9494606d09c9243833bcf65e8c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/clue/php-stdio-react/zipball/c307fc7ab581c9494606d09c9243833bcf65e8c9",
+                "reference": "c307fc7ab581c9494606d09c9243833bcf65e8c9",
+                "shasum": ""
+            },
+            "require": {
+                "clue/term-react": "^0.1.1",
+                "clue/utf8-react": "^0.1",
+                "php": ">=5.3",
+                "react/event-loop": "0.3.*|0.4.*",
+                "react/stream": "^0.4.2"
+            },
+            "require-dev": {
+                "clue/arguments": "^2.0",
+                "clue/commander": "^1.2"
+            },
+            "suggest": {
+                "ext-mbstring": "Using ext-mbstring should provide slightly better performance for handling I/O"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clue\\React\\Stdio\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@lueck.tv"
+                }
+            ],
+            "description": "Async, event-driven console input & output (STDIN, STDOUT), built on top of React PHP",
+            "homepage": "https://github.com/clue/php-stdio-react",
+            "keywords": [
+                "async",
+                "autocomplete",
+                "autocompletion",
+                "history",
+                "reactphp",
+                "readline",
+                "stdin",
+                "stdio",
+                "stdout"
+            ],
+            "time": "2017-01-08T15:46:37+00:00"
+        },
+        {
+            "name": "clue/term-react",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/clue/php-term-react.git",
+                "reference": "bb8784283aef16b8b1fe3ed5a8fe16d4669cfc92"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/clue/php-term-react/zipball/bb8784283aef16b8b1fe3ed5a8fe16d4669cfc92",
+                "reference": "bb8784283aef16b8b1fe3ed5a8fe16d4669cfc92",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "react/stream": "^0.4 || ^0.3"
+            },
+            "require-dev": {
+                "react/event-loop": "^0.4 || ^0.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clue\\React\\Term\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@lueck.tv"
+                }
+            ],
+            "description": "Streaming terminal emulator, built on top of React PHP",
+            "homepage": "https://github.com/clue/php-term-react",
+            "keywords": [
+                "C0",
+                "CSI",
+                "ansi",
+                "apc",
+                "ascii",
+                "c1",
+                "control codes",
+                "dps",
+                "osc",
+                "pm",
+                "reactphp",
+                "streaming",
+                "terminal",
+                "vt100",
+                "xterm"
+            ],
+            "time": "2016-06-14T20:44:58+00:00"
+        },
+        {
+            "name": "clue/utf8-react",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/clue/php-utf8-react.git",
+                "reference": "d162cca3c0e05df82d79aad190a0a337cd8ac566"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/clue/php-utf8-react/zipball/d162cca3c0e05df82d79aad190a0a337cd8ac566",
+                "reference": "d162cca3c0e05df82d79aad190a0a337cd8ac566",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "react/stream": "^0.4 || ^0.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clue\\React\\Utf8\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@lueck.tv"
+                }
+            ],
+            "description": "Streaming UTF-8 parser for React PHP",
+            "homepage": "https://github.com/clue/php-utf8-react",
+            "keywords": [
+                "reactphp",
+                "streaming",
+                "unicode",
+                "utf-8",
+                "utf8"
+            ],
+            "time": "2016-06-24T08:57:02+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -851,16 +1013,16 @@
         },
         {
             "name": "mpociot/botman",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mpociot/botman.git",
-                "reference": "24673cba6ead895823bd18280f619eb263d884d3"
+                "reference": "71cabf9eb27c27839935f1f6e471a8cefbc4058d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mpociot/botman/zipball/24673cba6ead895823bd18280f619eb263d884d3",
-                "reference": "24673cba6ead895823bd18280f619eb263d884d3",
+                "url": "https://api.github.com/repos/mpociot/botman/zipball/71cabf9eb27c27839935f1f6e471a8cefbc4058d",
+                "reference": "71cabf9eb27c27839935f1f6e471a8cefbc4058d",
                 "shasum": ""
             },
             "require": {
@@ -913,7 +1075,7 @@
                 "slack",
                 "telegram"
             ],
-            "time": "2017-02-09T22:53:50+00:00"
+            "time": "2017-02-26T21:51:40+00:00"
         },
         {
             "name": "mpociot/phpws",
