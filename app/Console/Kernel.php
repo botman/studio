@@ -17,7 +17,6 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         BotManListen::class,
-        BotManTinker::class,
         FacebookAddStartButtonPayload::class
     ];
 

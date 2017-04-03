@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f117124f4f6cb7c14c5229608728b41",
+    "content-hash": "50493505aeb27760d4ca20d160f79db4",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1076,6 +1076,57 @@
                 "telegram"
             ],
             "time": "2017-02-26T21:51:40+00:00"
+        },
+        {
+            "name": "mpociot/botman-tinker",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mpociot/botman-tinker.git",
+                "reference": "7aea32759e7280f28fe573be4d73dd183a356d01"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mpociot/botman-tinker/zipball/7aea32759e7280f28fe573be4d73dd183a356d01",
+                "reference": "7aea32759e7280f28fe573be4d73dd183a356d01",
+                "shasum": ""
+            },
+            "require": {
+                "clue/stdio-react": "^1.0",
+                "illuminate/support": "~5.0",
+                "mpociot/botman": "^1.4",
+                "mpociot/slack-client": "^0.2.6",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.0",
+                "phpunit/phpunit": "~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mpociot\\BotManTinker\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcel Pociot",
+                    "email": "m.pociot@gmail.com"
+                }
+            ],
+            "description": "BotMan tinker command for your Laravel BotMan project",
+            "homepage": "http://github.com/mpociot/botman-tinker",
+            "keywords": [
+                "Botman",
+                "Tinker",
+                "bot",
+                "laravel"
+            ],
+            "time": "2017-04-03T15:32:21+00:00"
         },
         {
             "name": "mpociot/phpws",
