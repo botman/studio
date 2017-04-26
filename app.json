@@ -1,6 +1,9 @@
 {
   "name": "BotMan",
   "description": "A template for getting started with BotMan and Laravel.",
+  "repository": "https://github.com/heroku/node-js-sample",
+  "keywords": ["chatbot", "php", "botman", "laravel", "slack", "facebook", "wechat", "nexmo", "skype", "telegram"],
+  "logo": "https://botman.io/img/botman.png",
   "website": "https://botman.io",
   "success_url": "/welcome",
   "env": {
