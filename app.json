@@ -9,43 +9,53 @@
   "env": {
     "FACEBOOK_TOKEN": {
       "description": "Your Facebook page token.",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "SLACK_TOKEN": {
       "description": "Your Slack bot/app token.",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "HIPCHAT_URL": {
       "description": "Your HipChat webhook URLs.",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "MICROSOFT_APP_ID": {
       "description": "Your Microsoft bot app ID.",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "MICROSOFT_APP_KEY": {
       "description": "Your Microsoft bot app key.",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "MICROSOFT_BOT_HANDLE": {
       "description": "Your Microsoft bot handle (only used for web bots)",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "NEXMO_KEY": {
       "description": "Your Nexmo app key.",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "NEXMO_SECRET": {
       "description": "Your Nexmo app secret.",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "TELEGRAM_TOKEN": {
       "description": " Your Telegram bot token.",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "TOKEN_VERIFY": {
       "description": "Your Facebook/WeChat verification key.",
-      "value": ""
+      "value": "",
+      "required": false
     }
   }
 }
