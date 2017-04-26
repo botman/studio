@@ -1,0 +1,48 @@
+{
+  "name": "BotMan",
+  "description": "A template for getting started with BotMan and Laravel.",
+  "website": "https://botman.io",
+  "success_url": "/welcome",
+  "env": {
+    "FACEBOOK_TOKEN": {
+      "description": "Your Facebook page token.",
+      "value": ""
+    },
+    "SLACK_TOKEN": {
+      "description": "Your Slack bot/app token.",
+      "value": ""
+    },
+    "HIPCHAT_URL": {
+      "description": "Your HipChat webhook URLs.",
+      "value": ""
+    },
+    "MICROSOFT_APP_ID": {
+      "description": "Your Microsoft bot app ID.",
+      "value": ""
+    },
+    "MICROSOFT_APP_KEY": {
+      "description": "Your Microsoft bot app key.",
+      "value": ""
+    },
+    "MICROSOFT_BOT_HANDLE": {
+      "description": "Your Microsoft bot handle (only used for web bots)",
+      "value": ""
+    },
+    "NEXMO_KEY": {
+      "description": "Your Nexmo app key.",
+      "value": ""
+    },
+    "NEXMO_SECRET": {
+      "description": "Your Nexmo app secret.",
+      "value": ""
+    },
+    "TELEGRAM_TOKEN": {
+      "description": " Your Telegram bot token.",
+      "value": ""
+    },
+    "TOKEN_VERIFY": {
+      "description": "Your Facebook/WeChat verification key.",
+      "value": ""
+    },
+  }
+}
