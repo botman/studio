@@ -43,6 +43,6 @@
     "TOKEN_VERIFY": {
       "description": "Your Facebook/WeChat verification key.",
       "value": ""
-    },
+    }
   }
 }
