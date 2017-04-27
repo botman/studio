@@ -10,7 +10,6 @@ use Mpociot\BotMan\Question;
 
 class ExampleConversation extends Conversation
 {
-
     /**
      * First question
      */
@@ -43,5 +42,4 @@ class ExampleConversation extends Conversation
     {
         $this->askReason();
     }
-
 }

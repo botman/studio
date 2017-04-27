@@ -51,12 +51,15 @@ class FacebookAddStartButtonPayload extends Command
             exit;
         }
 
-        $response = $this->http->post('https://graph.facebook.com/v2.6/me/messenger_profile?access_token='.config('services.botman.facebook_token'),
-            [], [
+        $response = $this->http->post(
+            'https://graph.facebook.com/v2.6/me/messenger_profile?access_token='.config('services.botman.facebook_token'),
+            [],
+            [
                 "get_started" => [
                     "payload" => $payload,
                 ],
-            ]);
+            ]
+        );
 
         $responseObject = json_decode($response->getContent());
 
