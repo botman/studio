@@ -61,7 +61,7 @@ return [
                                 [
                                     'title'   => 'Pay Bill',
                                     'type'    => 'postback',
-                                    'payload' => 'PAYBILL_PAYLOAD'
+                                    'payload' => 'PAYBILL_PAYLOAD',
                                 ]
                             ],
                         ],
@@ -69,7 +69,7 @@ return [
                             'type'                 => 'web_url',
                             'title'                => 'Latest News',
                             'url'                  => 'http://botman.io',
-                            'webview_height_ratio' => 'full'
+                            'webview_height_ratio' => 'full',
                         ]
                     ],
                 ],
