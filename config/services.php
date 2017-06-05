@@ -35,7 +35,6 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
-
     'botman' => [
         'hipchat_urls' => [
             env('HIPCHAT_URL')
@@ -48,6 +47,33 @@ return [
         'slack_token' => env('SLACK_TOKEN'),
         'telegram_token' => env('TELEGRAM_TOKEN'),
         'facebook_token' => env('FACEBOOK_TOKEN'),
-        'facebook_start_button_payload' => ''
+        'facebook_start_button_payload' => '',
+        'facebook_persistent_menu' => [
+            'persistent_menu' => [
+                [
+                    'locale' => 'default',
+                    'composer_input_disabled' => 'true',
+                    'call_to_actions' => [
+                        [
+                            'title' => 'My Account',
+                            'type' => 'nested',
+                            'call_to_actions' => [
+                                [
+                                    'title' => 'Pay Bill',
+                                    'type' => 'postback',
+                                    'payload' => 'PAYBILL_PAYLOAD'
+                                ]
+                            ],
+                        ],
+                        [
+                            'type' => 'web_url',
+                            'title' => 'Latest News',
+                            'url' => 'http://botman.io',
+                            'webview_height_ratio' => 'full'
+                        ]
+                    ],
+                ]
+            ]
+        ]
     ],
 ];
