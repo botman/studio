@@ -41,7 +41,7 @@ $botman->hears('YOUR_PAYLOAD_TEXT', function (BotMan $bot) {
 });
 ```
 
-### Add Facebook Get Started button
+### Add Facebook Peristent Menu
 
 With this starter project it now gets much easier to add a persistent Facebook menu to your bot. First define the structure and types of your menu in your `services.php` config file. There you will find a demo menu payload. Just edit it to your needs. You can read more about the menu possibilities in the [Facebook Docs](https://developers.facebook.com/docs/messenger-platform/messenger-profile/persistent-menu#post). Then run the artisan command `php artisan botman:facebookAddMenu` to create or update the Facebook menu. 
 
