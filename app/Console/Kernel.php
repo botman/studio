@@ -3,7 +3,7 @@
 namespace App\Console;
 
 use App\Console\Commands\BotManListen;
-use App\Console\Commands\BotManTinker;
+use App\Console\Commands\FacebookAddPersistentMenu;
 use App\Console\Commands\FacebookAddStartButtonPayload;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -17,13 +17,15 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         BotManListen::class,
-        FacebookAddStartButtonPayload::class
+        FacebookAddStartButtonPayload::class,
+        FacebookAddPersistentMenu::class,
     ];
 
     /**
      * Define the application's command schedule.
      *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @param \Illuminate\Console\Scheduling\Schedule $schedule
+     *
      * @return void
      */
     protected function schedule(Schedule $schedule)
