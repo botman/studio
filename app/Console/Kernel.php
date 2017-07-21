@@ -2,8 +2,10 @@
 
 namespace App\Console;
 
+use App\Console\Commands\BotManListDrivers;
 use TheCodingMachine\Discovery\Discovery;
 use Illuminate\Console\Scheduling\Schedule;
+use App\Console\Commands\BotManInstallDriver;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 
@@ -15,7 +17,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        BotManInstallDriver::class,
+        BotManListDrivers::class,
     ];
 
     /**

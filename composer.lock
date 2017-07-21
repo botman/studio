@@ -4,8 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "63aa94b77008f6ba7e83ed50cd7b120e",
+    "content-hash": "0c45d3ca7117c862d20bb8a4417908f2",
     "packages": [
+        {
+            "name": "botman/driver-cisco-spark",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/botman/driver-cisco-spark.git",
+                "reference": "b68bb36cc88c86288774f3350c5cfc84ad5c0bae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/botman/driver-cisco-spark/zipball/b68bb36cc88c86288774f3350c5cfc84ad5c0bae",
+                "reference": "b68bb36cc88c86288774f3350c5cfc84ad5c0bae",
+                "shasum": ""
+            },
+            "require": {
+                "mpociot/botman": "~2.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BotMan\\Drivers\\CiscoSpark\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcel Pociot",
+                    "email": "m.pociot@gmail.com"
+                }
+            ],
+            "description": "Cisco Spark driver for BotMan",
+            "homepage": "http://github.com/botman/driver-cisco-spark",
+            "keywords": [
+                "Botman",
+                "Cisco Spark",
+                "bot",
+                "spark"
+            ],
+            "time": "2017-06-26 15:13:07"
+        },
         {
             "name": "botman/driver-facebook",
             "version": "dev-master",
@@ -5137,6 +5186,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "botman/driver-cisco-spark": 20,
         "botman/driver-facebook": 20,
         "botman/driver-slack": 20,
         "mpociot/botman": 20
