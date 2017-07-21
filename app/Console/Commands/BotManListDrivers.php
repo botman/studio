@@ -59,6 +59,7 @@ class BotManListDrivers extends Command
             'Name',
             'Service',
             'Description',
+            'Installed?'
         ];
 
         $tableData = collect($drivers)->transform(function ($driver) {
@@ -66,9 +67,22 @@ class BotManListDrivers extends Command
                 str_replace('botman/driver-', '', $driver->package),
                 $driver->name,
                 $driver->description,
+                $this->isDriverInstalled($driver->package)
             ];
         });
 
         $this->table($headers, $tableData);
+    }
+
+    /**
+     * @param $package
+     * @return string
+     */
+    protected function isDriverInstalled($package)
+    {
+        $config = str_replace('botman/driver-', '', $package);
+        $bool = file_exists(config_path('botman/'.$config.'.php'));
+
+        return ($bool) ? '✅' : '❌';
     }
 }
