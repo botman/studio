@@ -8,7 +8,7 @@ use Illuminate\Console\Command;
 
 class BotManInstallDriver extends Command
 {
-    const DRIVER_REPOSITORY_URL = 'http://botman.io.dev/studio/drivers.json';
+    const DRIVER_REPOSITORY_URL = 'https://botman.io/studio/drivers.json';
 
     /**
      * The name and signature of the console command.
