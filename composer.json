@@ -6,9 +6,6 @@
     "type": "project",
     "require": {
         "php": ">=7.0",
-        "botman/driver-cisco-spark": "dev-master",
-        "botman/driver-facebook": "dev-master",
-        "botman/driver-slack": "dev-master",
         "clue/stdio-react": "^1.0",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
