@@ -4,38 +4,46 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c45d3ca7117c862d20bb8a4417908f2",
+    "content-hash": "711210c9595688f9fcac507162b18219",
     "packages": [
         {
-            "name": "botman/driver-cisco-spark",
+            "name": "botman/studio-addons",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/botman/driver-cisco-spark.git",
-                "reference": "b68bb36cc88c86288774f3350c5cfc84ad5c0bae"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/botman/driver-cisco-spark/zipball/b68bb36cc88c86288774f3350c5cfc84ad5c0bae",
-                "reference": "b68bb36cc88c86288774f3350c5cfc84ad5c0bae",
-                "shasum": ""
+                "type": "path",
+                "url": "../studio-addons",
+                "reference": "72f21daad490699ebb56fdd3a51e24d00d89b758",
+                "shasum": null
             },
             "require": {
-                "mpociot/botman": "~2.0",
-                "php": ">=7.0"
+                "illuminate/console": "~5.4.0",
+                "illuminate/support": "~5.4.0",
+                "php": ">=7.0",
+                "thecodingmachine/discovery": "^1.2"
             },
             "require-dev": {
-                "ext-curl": "*",
                 "mockery/mockery": "dev-master",
                 "phpunit/phpunit": "~5.0"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "BotMan\\Drivers\\CiscoSpark\\": "src/"
+                    "BotMan\\Studio\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "cs": [
+                    "php-cs-fixer fix"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -45,119 +53,13 @@
                     "email": "m.pociot@gmail.com"
                 }
             ],
-            "description": "Cisco Spark driver for BotMan",
-            "homepage": "http://github.com/botman/driver-cisco-spark",
+            "description": "BotMan Studio specific addons.",
+            "homepage": "http://github.com/botman/studio-addons",
             "keywords": [
-                "Botman",
-                "Cisco Spark",
-                "bot",
-                "spark"
-            ],
-            "time": "2017-06-26 15:13:07"
-        },
-        {
-            "name": "botman/driver-facebook",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/botman/driver-facebook.git",
-                "reference": "b5785aa2b9b375ad9b0ca3c451ed4df8b39dd6f9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/botman/driver-facebook/zipball/b5785aa2b9b375ad9b0ca3c451ed4df8b39dd6f9",
-                "reference": "b5785aa2b9b375ad9b0ca3c451ed4df8b39dd6f9",
-                "shasum": ""
-            },
-            "require": {
-                "mpociot/botman": "~2.0",
-                "php": ">=7.0"
-            },
-            "require-dev": {
-                "ext-curl": "*",
-                "mockery/mockery": "dev-master",
-                "phpunit/phpunit": "~5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "BotMan\\Drivers\\Facebook\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marcel Pociot",
-                    "email": "m.pociot@gmail.com"
-                }
-            ],
-            "description": "Facebook Messenger driver for BotMan",
-            "homepage": "http://github.com/botman/driver-facebook",
-            "keywords": [
-                "Botman",
-                "Messenger",
-                "bot",
-                "facebook",
-                "facebook messenger"
-            ],
-            "time": "2017-06-14 20:23:39"
-        },
-        {
-            "name": "botman/driver-slack",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/botman/driver-slack.git",
-                "reference": "94fa121e594a235aaaa1d64ad85bec83a1a98fea"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/botman/driver-slack/zipball/94fa121e594a235aaaa1d64ad85bec83a1a98fea",
-                "reference": "94fa121e594a235aaaa1d64ad85bec83a1a98fea",
-                "shasum": ""
-            },
-            "require": {
-                "mpociot/botman": "~2.0",
-                "php": ">=7.0"
-            },
-            "require-dev": {
-                "ext-curl": "*",
-                "illuminate/console": "~5.0",
-                "illuminate/support": "~5.0",
-                "mockery/mockery": "dev-master",
-                "mpociot/slack-client": "^0.3.0",
-                "phpunit/phpunit": "~5.0"
-            },
-            "suggest": {
-                "mpociot/slack-client": "Use the Slack RTM API with BotMan"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "BotMan\\Drivers\\Slack\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marcel Pociot",
-                    "email": "m.pociot@gmail.com"
-                }
-            ],
-            "description": "Slack driver for BotMan",
-            "homepage": "http://github.com/botman/driver-slack",
-            "keywords": [
-                "Botman",
-                "bot",
-                "slack"
-            ],
-            "time": "2017-07-19 19:41:12"
+                "Bot",
+                "BotMan",
+                "Studio"
+            ]
         },
         {
             "name": "clue/stdio-react",
@@ -392,33 +294,33 @@
         },
         {
             "name": "doctrine/inflector",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae"
+                "reference": "e11d84c6e018beedd929cff5220969a3c6d1d462"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
-                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/e11d84c6e018beedd929cff5220969a3c6d1d462",
+                "reference": "e11d84c6e018beedd929cff5220969a3c6d1d462",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": "^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.*"
+                "phpunit/phpunit": "^6.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\Inflector\\": "lib/"
+                "psr-4": {
+                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -455,7 +357,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-11-06T14:35:42+00:00"
+            "time": "2017-07-22T12:18:28+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -1172,12 +1074,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/botman/botman.git",
-                "reference": "296aad0f074298c5b4c5f037d83ec73f53e8ab81"
+                "reference": "4e6da5716bb3c0580232dade4ef194a4d0bfeed6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/botman/botman/zipball/296aad0f074298c5b4c5f037d83ec73f53e8ab81",
-                "reference": "296aad0f074298c5b4c5f037d83ec73f53e8ab81",
+                "url": "https://api.github.com/repos/botman/botman/zipball/4e6da5716bb3c0580232dade4ef194a4d0bfeed6",
+                "reference": "4e6da5716bb3c0580232dade4ef194a4d0bfeed6",
                 "shasum": ""
             },
             "require": {
@@ -1236,7 +1138,7 @@
                 "slack",
                 "telegram"
             ],
-            "time": "2017-07-20T09:11:36+00:00"
+            "time": "2017-07-20T09:38:05+00:00"
         },
         {
             "name": "mpociot/botman-tinker",
@@ -1823,16 +1725,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.9",
+            "version": "v0.8.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "58a31cc4404c8f632d8c557bc72056af2d3a83db"
+                "reference": "7ab97e5a32202585309f3ee35a0c08d2a8e588b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/58a31cc4404c8f632d8c557bc72056af2d3a83db",
-                "reference": "58a31cc4404c8f632d8c557bc72056af2d3a83db",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/7ab97e5a32202585309f3ee35a0c08d2a8e588b1",
+                "reference": "7ab97e5a32202585309f3ee35a0c08d2a8e588b1",
                 "shasum": ""
             },
             "require": {
@@ -1892,7 +1794,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-07-06T14:53:52+00:00"
+            "time": "2017-07-22T15:14:19+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -3640,16 +3542,16 @@
         },
         {
             "name": "zendframework/zend-validator",
-            "version": "2.9.1",
+            "version": "2.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-validator.git",
-                "reference": "c9a8160a0191e34bb98ac1ecd4e453391c424bb3"
+                "reference": "a58dbe8463b93de0d650e296d56cb7da4a129ff3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-validator/zipball/c9a8160a0191e34bb98ac1ecd4e453391c424bb3",
-                "reference": "c9a8160a0191e34bb98ac1ecd4e453391c424bb3",
+                "url": "https://api.github.com/repos/zendframework/zend-validator/zipball/a58dbe8463b93de0d650e296d56cb7da4a129ff3",
+                "reference": "a58dbe8463b93de0d650e296d56cb7da4a129ff3",
                 "shasum": ""
             },
             "require": {
@@ -3707,38 +3609,38 @@
                 "validator",
                 "zf2"
             ],
-            "time": "2017-05-17T22:06:13+00:00"
+            "time": "2017-07-20T16:44:59+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
-            "version": "1.0.5",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d"
+                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8e884e78f9f0eb1329e445619e04456e64d8051d",
-                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
+                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3,<8.0-DEV"
+                "php": "^7.1"
             },
             "require-dev": {
                 "athletic/athletic": "~0.1.8",
                 "ext-pdo": "*",
                 "ext-phar": "*",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~2.0"
+                "phpunit/phpunit": "^6.2.3",
+                "squizlabs/php_codesniffer": "^3.0.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -3763,7 +3665,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2015-06-14T21:17:01+00:00"
+            "time": "2017-07-22T11:58:36+00:00"
         },
         {
             "name": "fzaninotto/faker",
@@ -5186,9 +5088,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "botman/driver-cisco-spark": 20,
-        "botman/driver-facebook": 20,
-        "botman/driver-slack": 20,
+        "botman/studio-addons": 20,
         "mpociot/botman": 20
     },
     "prefer-stable": true,

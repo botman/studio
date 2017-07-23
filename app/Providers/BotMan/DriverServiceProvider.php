@@ -3,7 +3,7 @@
 namespace App\Providers\BotMan;
 
 use BotMan\BotMan\Drivers\DriverManager;
-use App\BotMan\Providers\DriverServiceProvider as ServiceProvider;
+use BotMan\Studio\Providers\DriverServiceProvider as ServiceProvider;
 
 class DriverServiceProvider extends ServiceProvider
 {

@@ -2,12 +2,8 @@
 
 namespace App\Console;
 
-use App\Console\Commands\BotManListDrivers;
-use TheCodingMachine\Discovery\Discovery;
 use Illuminate\Console\Scheduling\Schedule;
-use App\Console\Commands\BotManInstallDriver;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-
 
 class Kernel extends ConsoleKernel
 {
@@ -17,8 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        BotManInstallDriver::class,
-        BotManListDrivers::class,
+        //
     ];
 
     /**
@@ -40,20 +35,6 @@ class Kernel extends ConsoleKernel
      */
     protected function commands()
     {
-        $this->discoverCommands();
-
         require base_path('routes/console.php');
-    }
-
-    /**
-     * Auto-discover BotMan commands and load them.
-     */
-    public function discoverCommands()
-    {
-        $commands = Discovery::getInstance()->get('botman/commands');
-
-        foreach ($commands as $command) {
-            $this->commands[] = $command;
-        }
     }
 }

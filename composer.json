@@ -9,10 +9,10 @@
         "clue/stdio-react": "^1.0",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
+        "botman/studio-addons": "~1.0",
         "mpociot/botman": "2.0.x-dev",
         "mpociot/botman-tinker": "~2.0",
-        "mpociot/slack-client": "^0.3.0",
-        "thecodingmachine/discovery": "^1.2"
+        "mpociot/slack-client": "^0.3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
