@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use App\BotManTester;
+use BotMan\Studio\Testing\BotManTester;
 use BotMan\BotMan\Drivers\DriverManager;
 use Illuminate\Contracts\Console\Kernel;
 use BotMan\BotMan\Drivers\Tests\FakeDriver;

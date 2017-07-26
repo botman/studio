@@ -15,11 +15,6 @@ class BotManController extends Controller
     {
         $botman = app('botman');
 
-        // Simple respond method
-        $botman->hears('Hello', function (BotMan $bot) {
-            $bot->reply('Hi there :)');
-        });
-
         $botman->listen();
     }
 
