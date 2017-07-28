@@ -41,12 +41,12 @@
         ],
         "post-install-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "App\\BotMan\\Providers\\DriverServiceProvider::publishDriverConfigurations",
+            "BotMan\\Studio\\Providers\\DriverServiceProvider::publishDriverConfigurations",
             "php artisan optimize"
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "App\\BotMan\\Providers\\DriverServiceProvider::publishDriverConfigurations",
+            "BotMan\\Studio\\Providers\\DriverServiceProvider::publishDriverConfigurations",
             "php artisan optimize"
         ]
     },
