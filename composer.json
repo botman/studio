@@ -6,10 +6,11 @@
     "type": "project",
     "require": {
         "php": ">=7.0",
+        "botman/driver-web": "dev-master",
+        "botman/studio-addons": "~1.0",
         "clue/stdio-react": "^1.0",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
-        "botman/studio-addons": "~1.0",
         "mpociot/botman": "2.0.x-dev",
         "mpociot/botman-tinker": "~2.0",
         "mpociot/slack-client": "^0.3.0"
