@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1e5b3274db61c6fa3e9b64201524976e",
+    "content-hash": "00c6c74156f037c8633be00a4b843fbf",
     "packages": [
         {
             "name": "botman/driver-web",
@@ -109,6 +109,61 @@
                 "studio"
             ],
             "time": "2017-08-01 12:13:00"
+        },
+        {
+            "name": "botman/tinker",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/botman/tinker.git",
+                "reference": "0fd1dbb78b88f111c99c9d3a82487aa12b015357"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/botman/tinker/zipball/0fd1dbb78b88f111c99c9d3a82487aa12b015357",
+                "reference": "0fd1dbb78b88f111c99c9d3a82487aa12b015357",
+                "shasum": ""
+            },
+            "require": {
+                "clue/stdio-react": "^1.0",
+                "illuminate/support": "~5.0",
+                "mpociot/botman": "~2.0",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.0",
+                "phpunit/phpunit": "~5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BotMan\\Tinker\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcel Pociot",
+                    "email": "m.pociot@gmail.com"
+                }
+            ],
+            "description": "BotMan tinker command for your Laravel BotMan project",
+            "homepage": "http://github.com/botman/tinker",
+            "keywords": [
+                "Botman",
+                "Tinker",
+                "bot",
+                "laravel"
+            ],
+            "time": "2017-08-01T12:41:27+00:00"
         },
         {
             "name": "clue/stdio-react",
@@ -1242,62 +1297,6 @@
                 "telegram"
             ],
             "time": "2017-08-03T12:21:23+00:00"
-        },
-        {
-            "name": "mpociot/botman-tinker",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/botman/tinker.git",
-                "reference": "847b17ff7b1ccc318ae2ea6338359b59b73f490d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/botman/tinker/zipball/847b17ff7b1ccc318ae2ea6338359b59b73f490d",
-                "reference": "847b17ff7b1ccc318ae2ea6338359b59b73f490d",
-                "shasum": ""
-            },
-            "require": {
-                "clue/stdio-react": "^1.0",
-                "illuminate/support": "~5.0",
-                "mpociot/botman": "~2.0",
-                "php": ">=5.6.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "~3.0",
-                "phpunit/phpunit": "~5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "BotMan\\Tinker\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marcel Pociot",
-                    "email": "m.pociot@gmail.com"
-                }
-            ],
-            "description": "BotMan tinker command for your Laravel BotMan project",
-            "homepage": "http://github.com/botman/tinker",
-            "keywords": [
-                "Botman",
-                "Tinker",
-                "bot",
-                "laravel"
-            ],
-            "abandoned": "botman/tinker",
-            "time": "2017-07-19T10:10:03+00:00"
         },
         {
             "name": "mpociot/phpws",
@@ -3970,16 +3969,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "f29dca382a6485c3cbe6379f0c61230167681937"
+                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f29dca382a6485c3cbe6379f0c61230167681937",
-                "reference": "f29dca382a6485c3cbe6379f0c61230167681937",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
+                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
                 "shasum": ""
             },
             "require": {
@@ -3991,7 +3990,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4-dev"
+                    "dev-master": "1.5-dev"
                 }
             },
             "autoload": {
@@ -4025,7 +4024,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-06-09T14:24:12+00:00"
+            "time": "2017-06-14T15:44:48+00:00"
         },
         {
             "name": "symfony/process",
@@ -4985,29 +4984,31 @@
     "packages-dev": [
         {
             "name": "fzaninotto/faker",
-            "version": "v1.6.0",
+            "version": "v1.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "44f9a286a04b80c76a4e5fb7aad8bb539b920123"
+                "reference": "d3ed4cc37051c1ca52d22d76b437d14809fc7e0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/44f9a286a04b80c76a4e5fb7aad8bb539b920123",
-                "reference": "44f9a286a04b80c76a4e5fb7aad8bb539b920123",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/d3ed4cc37051c1ca52d22d76b437d14809fc7e0d",
+                "reference": "d3ed4cc37051c1ca52d22d76b437d14809fc7e0d",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.3|^7.0"
+                "php": "^5.3.3 || ^7.0"
             },
             "require-dev": {
                 "ext-intl": "*",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~1.5"
+                "phpunit/phpunit": "^4.0 || ^5.0",
+                "squizlabs/php_codesniffer": "^1.5"
             },
             "type": "library",
             "extra": {
-                "branch-alias": []
+                "branch-alias": {
+                    "dev-master": "1.8-dev"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -5029,7 +5030,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2016-04-29T12:21:54+00:00"
+            "time": "2017-08-15T16:48:10+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
