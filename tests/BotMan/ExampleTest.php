@@ -15,8 +15,8 @@ class ExampleTest extends TestCase
     public function testBasicTest()
     {
         $this->bot
-            ->receives('test')
-            ->assertReply('hello!');
+            ->receives('Hi')
+            ->assertReply('Hello!');
     }
 
     /**
