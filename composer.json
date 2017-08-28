@@ -11,7 +11,7 @@
         "clue/stdio-react": "^1.0",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
-        "mpociot/botman": "2.0.x-dev",
+        "botman/botman": "~2.0",
         "botman/tinker": "^0.2",
         "mpociot/slack-client": "^0.3.0"
     },
@@ -55,7 +55,5 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "optimize-autoloader": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
