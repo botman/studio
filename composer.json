@@ -6,7 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=7.0",
-        "botman/driver-web": "dev-master",
+        "botman/driver-web": "~1.0",
         "botman/studio-addons": "~1.0",
         "clue/stdio-react": "^1.0",
         "laravel/framework": "5.4.*",
