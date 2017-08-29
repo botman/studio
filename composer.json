@@ -12,7 +12,7 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "botman/botman": "~2.0",
-        "botman/tinker": "^0.2",
+        "botman/tinker": "~1.0",
         "mpociot/slack-client": "^0.3.0"
     },
     "require-dev": {
