@@ -26,5 +26,4 @@ class DriverServiceProvider extends ServiceProvider
             DriverManager::loadDriver($driver);
         }
     }
-
 }
