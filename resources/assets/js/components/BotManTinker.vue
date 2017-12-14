@@ -2,23 +2,75 @@
     <div>
         <div class="arrow"></div>
         <ul class="ChatLog">
-            <li class="ChatLog__entry" v-for="message in messages" :class="{'ChatLog__entry_mine': message.isMine}">
+            <li class="ChatLog__entry" v-for="(message, index) in messages" :key="index" :class="{'ChatLog__entry_mine': message.isMine}">
                 <img class="ChatLog__avatar" src="/logo.png" />
                 <p class="ChatLog__message">{{ message.text }}</p>
             </li>
         </ul>
 
-        <input type="text" class="ChatInput" @keyup.enter="sendMessage" v-model="newMessage" placeholder="">
+        <input type="text" class="ChatInput" @keyup.enter="sendMessage" v-model="newMessage" placeholder="Type a message">
     </div>
 </template>
 
-<style>
+<script>
+    import axios from 'axios'
+    const API_ENDPOINT = '/botman'
+
+    export default {
+        data() {
+            return {
+                messages: [],
+                newMessage: null
+            }
+        },
+
+        methods: {
+            _addMessage(text, attachment, isMine = false) {
+                this.messages.push({
+                    'isMine': isMine,
+                    'user': isMine ? '👨' : '🤖',
+                    'text': text,
+                    'attachment': attachment || {}
+                })
+            },
+
+            sendMessage() {
+                let messageText = this.newMessage
+                this.newMessage = ''
+                if (messageText === 'clear')
+                    return this.messages = []
+
+                this._addMessage(messageText, null, true)
+
+                axios.post(API_ENDPOINT, {
+                    driver: 'web',
+                    userId: 9999999,
+                    message: messageText
+                }).then(response => {
+                    let messages = response.data.messages || []
+                    messages.forEach(msg => {
+                        this._addMessage(msg.text, msg.attachment)
+                    })
+                }, response => {
+
+                })
+            }
+        }
+    }
+</script>
+
+<style lang="scss">
     input.ChatInput {
         width: 300px;
         height: 25px;
         border-radius: 5px;
         border: none;
         padding: 10px;
+        margin-bottom: 10px;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     ul.ChatLog {
@@ -28,9 +80,10 @@
     .ChatLog {
         max-width: 20em;
         margin: 0 auto;
-    }
-    .ChatLog .ChatLog__entry {
-        margin: .5em;
+
+        .ChatLog__entry {
+            margin: .5em;
+        }
     }
 
     .ChatLog__entry {
@@ -42,6 +95,16 @@
 
     .ChatLog__entry.ChatLog__entry_mine {
         flex-direction: row-reverse;
+
+        .ChatLog__message {
+            &:before {
+                right: -12px;
+                bottom: .6em;
+                left: auto;
+                border: 6px solid transparent;
+                border-left-color: #08f;
+            }
+        }
     }
 
     .ChatLog__avatar {
@@ -62,26 +125,18 @@
     .ChatLog__entry .ChatLog__message {
         position: relative;
         margin: 0 12px;
-    }
 
-    .ChatLog__entry .ChatLog__message::before {
-        position: absolute;
-        right: auto;
-        bottom: .6em;
-        left: -12px;
-        height: 0;
-        content: '';
-        border: 6px solid transparent;
-        border-right-color: #ddd;
-        z-index: 2;
-    }
-
-    .ChatLog__entry.ChatLog__entry_mine .ChatLog__message::before {
-        right: -12px;
-        bottom: .6em;
-        left: auto;
-        border: 6px solid transparent;
-        border-left-color: #08f;
+        &:before {
+            position: absolute;
+            right: auto;
+            bottom: .6em;
+            left: -12px;
+            height: 0;
+            content: '';
+            border: 6px solid transparent;
+            border-right-color: #ddd;
+            z-index: 2;
+        }
     }
 
     .ChatLog__message {
@@ -99,52 +154,3 @@
         color: #fff;
     }
 </style>
-
-<script>
-    const axios = require('axios');
-    const API_ENDPOINT = '/botman';
-
-    export default {
-        data() {
-            return {
-                messages: [],
-                newMessage: null
-            };
-        },
-
-        methods: {
-            _addMessage(text, attachment, isMine) {
-                this.messages.push({
-                    'isMine': isMine,
-                    'user': isMine ? '👨' : '🤖',
-                    'text': text,
-                    'attachment': attachment || {},
-                });
-            },
-
-            sendMessage() {
-                let messageText = this.newMessage;
-                this.newMessage = '';
-                if (messageText === 'clear') {
-                    this.messages = [];
-                    return;
-                }
-
-                this._addMessage(messageText, null, true);
-
-                axios.post(API_ENDPOINT, {
-                    driver: 'web',
-                    userId: 9999999,
-                    message: messageText
-                }).then(response => {
-                    let messages = response.data.messages || [];
-                    messages.forEach(msg => {
-                        this._addMessage(msg.text, msg.attachment, false);
-                    });
-                }, response => {
-
-                });
-            }
-        }
-    }
-</script>
