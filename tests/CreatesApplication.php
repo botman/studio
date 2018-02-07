@@ -29,7 +29,7 @@ trait CreatesApplication
         $this->botman = $app->make('botman');
         $this->bot = new BotManTester($this->botman, $fakeDriver, $this);
 
-        Hash::setRounds(5);
+        Hash::driver('bcrypt')->setRounds(4);
 
         return $app;
     }
