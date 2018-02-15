@@ -19,7 +19,8 @@
         "botman/botman": "~2.0",
         "botman/tinker": "~1.0",
         "mpociot/slack-client": "^0.3.0",
-        "fideloper/proxy": "~4.0"
+        "fideloper/proxy": "~4.0",
+        "symfony/thanks": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
