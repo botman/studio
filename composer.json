@@ -16,7 +16,7 @@
         "botman/studio-addons": "~1.2.1",
         "botman/tinker": "~1.0",
         "fideloper/proxy": "~4.0",
-        "laravel/framework": "5.6.*",
+        "laravel/framework": "5.7.*",
         "laravel/tinker": "~1.0"
     },
     "require-dev": {
