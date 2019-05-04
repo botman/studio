@@ -2,7 +2,6 @@
 
 namespace Tests\BotMan;
 
-use Illuminate\Foundation\Inspiring;
 use Tests\TestCase;
 
 class ExampleTest extends TestCase
