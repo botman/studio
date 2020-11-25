@@ -29,11 +29,6 @@
         .content {
             text-align: center;
         }
-                
-        #app {
-            position: absolute;
-            bottom: 10px;
-        }
     </style>
 </head>
 <body>
